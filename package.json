@@ -1,0 +1,8 @@
+{
+  "name": "ramos-api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Felipe Ramos",
+  "license": "MIT",
+  "private": false
+}
