@@ -6,6 +6,7 @@ interface UserProp {
   password: string;
   name: string;
   company?: string;
+  isAdmin?: boolean;
 }
 
 interface userModelProps extends mongoose.Model<UserDoc> {
@@ -17,6 +18,7 @@ interface UserDoc extends mongoose.Document {
   password: string;
   name: string;
   company?: string;
+  isAdmin?: boolean;
   passwordResetToken?: string;
   passwordResetExpires?: Date;
 }
@@ -40,6 +42,11 @@ const userSchema = new mongoose.Schema({
   company: {
     type: String,
     select: false,
+  },
+  isAdmin: {
+    type: Boolean,
+    select: true,
+    default: false,
   },
   passwordResetToken: {
     type: String,
