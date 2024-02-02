@@ -10,7 +10,5 @@ interface GetTokenProps {
 }
 
 export function GetToken(params = {}): GetTokenProps {
-  return jwt.sign({ params }, AuthKey, {
-    expiresIn: 86400,
-  });
+  return jwt.sign({ params }, AuthKey);
 }
